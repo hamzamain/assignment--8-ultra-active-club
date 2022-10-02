@@ -1,0 +1,19 @@
+.time {
+    background-color: rgb(235, 235, 235);
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-weight: 500;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    /* background-color: rgb(235, 235, 235); */
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-weight: 500;
+    margin: 20px 0;
+    /* display: flex; */
+    /* justify-content: space-between; */
+}

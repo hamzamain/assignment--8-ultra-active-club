@@ -1,10 +1,13 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBook, faduotone } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 
 const Header = () => {
   return (
-    <div>
-      <h1 className="font-extrabold text-orange-500 text-center text-2xl">
-        ULTRA ACTIVE STUDY ROUTINE
+    <div className="p-10">
+      <h1 className="font-bold text-blue-500 text-center text-3xl">
+        <FontAwesomeIcon icon={faBook} />
+        <small className="ml-2">ULTRA ACTIVE STUDY ROUTINE</small>
       </h1>
     </div>
   );
