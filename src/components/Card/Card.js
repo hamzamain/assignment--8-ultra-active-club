@@ -17,7 +17,6 @@ const Card = ({ card, handler }) => {
       </div>
       <button
         onClick={() => handler(time)}
-        // onClick={() => handler(time)}
         className="mt-3 bg-blue-500 hover:bg-blue-600 w-full text-white px-3 py-2 rounded-md "
       >
         Add to List

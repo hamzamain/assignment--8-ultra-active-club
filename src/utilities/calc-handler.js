@@ -1,17 +1,21 @@
-const addToDb = (id) => {
-  let routineCart = getRoutineCart();
-  routineCart[id] = 1;
+const addToDb = (location, time) => {
+  let routineCart = getRoutineCart(location);
+  routineCart[time] = 1;
 
-  localStorage.setItem("routine-cart", JSON.stringify(routineCart));
+  localStorage.setItem(location, JSON.stringify(routineCart));
 };
 
-const getRoutineCart = () => {
+const getRoutineCart = (location) => {
   let routineCart = {};
-  const stored = localStorage.getItem("routine-cart");
+  const stored = localStorage.getItem(location);
   if (stored) {
     routineCart = JSON.parse(stored);
   }
   return routineCart;
 };
 
-export { addToDb, getRoutineCart };
+const setBreakToDb = (location, time) => {
+  localStorage.setItem(location, time);
+};
+
+export { addToDb, getRoutineCart, setBreakToDb };

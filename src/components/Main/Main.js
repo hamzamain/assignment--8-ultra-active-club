@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { addToDb, getRoutineCart } from "../../utilities/calc-handler";
+import {
+  addToDb,
+  getRoutineCart,
+  setBreakToDb,
+} from "../../utilities/calc-handler";
 import Break from "../Break/Break";
 import Card from "../Card/Card";
 import Time from "../Time/Time";
@@ -7,10 +11,9 @@ import User from "../User/User";
 import "./Main.css";
 
 const Main = () => {
-  const breaks = [5, 10, 15, 20, 30];
+  const breaks = [10, 20, 30, 40, 50];
 
   const [cards, setCards] = useState([]);
-  // const [times, setTimes] = useState([]);
   const [times, setTimes] = useState([]);
   const [brks, setBrks] = useState(0);
 
@@ -20,22 +23,22 @@ const Main = () => {
       .then((data) => setCards(data));
   }, []);
 
+  useEffect(() => {
+    const breakStored = localStorage.getItem("break");
+    console.log(breakStored);
+    setBrks(breakStored);
+  }, []);
+
   const addToCartHandler = (time) => {
-    // console.log(time);
-    // addToDb(id);
     const newTimes = [...times, time];
     setTimes(newTimes);
-    // addToDb(id);
-    // console.log(activitys[0].time);
   };
 
   const addBreakTimeHandler = (time) => {
     console.log(time);
+    setBreakToDb("break", time);
     setBrks(time);
   };
-
-  // const newTimes = [...activitys];
-  // const times = newTimes.map((activity) => activity.time);
 
   return (
     <div className="main bg-gray-100">
