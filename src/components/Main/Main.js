@@ -41,13 +41,13 @@ const Main = () => {
   };
 
   return (
-    <div className="main bg-gray-100">
+    <div className="main bg-gray-100 relative">
       <div className="card-container p-20 rounded">
         {cards.map((card) => (
           <Card card={card} key={card.id} handler={addToCartHandler}></Card>
         ))}
       </div>
-      <div className="cart-container sticky top-0">
+      <div className="cart-container sticky top-0 right-0">
         <div className="mt-8 ml-8 mr-2">
           <User></User>
           <Break breaks={breaks} handler={addBreakTimeHandler}></Break>

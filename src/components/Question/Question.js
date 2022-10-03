@@ -25,10 +25,9 @@ const Question = () => {
           Rest use of useEffect other then load data?
         </h5>
         <p>
-          Tempore sapiente architecto saepe pariatur voluptatem? Incidunt esse
-          neque animi. praesentium illo tempora vitae repellat adipisci
-          blanditiis cumque aperiam, sunt ipsa dolorem ea. Dicta veniam sint
-          molestias sunt perspiciatis recusandae.
+          The useEffect Hook allows you to perform side effects in your
+          components. Some examples of side effects are: fetching data, directly
+          updating the DOM, and timers.
         </p>
       </div>
     </div>

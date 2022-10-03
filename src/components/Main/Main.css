@@ -2,7 +2,6 @@
     display: grid;
     grid-template-columns: 4fr 1fr;
     grid-gap: 20px;
-
 }
 
 .card-container {
@@ -14,6 +13,4 @@
 
 .cart-container {
     background-color: white;
-    position: sticky;
-    top: 0;
 }
